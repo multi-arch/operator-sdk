@@ -44,7 +44,7 @@ func (b *BuildDockerfile) GetInput() (input.Input, error) {
 	return b.Input, nil
 }
 
-const buildDockerfileAnsibleTmpl = `FROM quay.io/operator-framework/ansible-operator:[[.ImageTag]]
+const buildDockerfileAnsibleTmpl = `FROM quay.io/multi-arch/operator-framework-ansible-operator:[[.ImageTag]]
 
 COPY watches.yaml ${HOME}/watches.yaml
 
